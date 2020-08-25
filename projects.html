@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en"> 
+
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nicolas Bray - Writing</title>
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!----------------------------------------------------- F O N T S ----------------------------------------------------->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!----------------------------------------------------- F O N T S ----------------------------------------------------->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!----------------------------------------------------- J S * I M P O R T S ----------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="javascript/parallax.js-1.5.0/parallax.min.js"></script>
+    <!----------------------------------------------------- J S * I M P O R T S -----------------------------------------------------> 
+    
+    <!----------------------------------------------------- P A R A L L A X * N O N * P C ----------------------------------------------------->
+    <script>
+      
+
+      $(function(){
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+          $('#ios-notice').removeClass('hidden');
+          $('.parallax-container').height( $(window).height() * 0.5 | 0 );
+        } else {
+          $(window).resize(function(){
+            var parallaxHeight = Math.max($(window).height() * 0.7, 200) | 0;
+            $('.parallax-container').height(parallaxHeight);
+          }).trigger('resize');
+        }
+      });
+    </script>
+    
+    <!----------------------------------------------------- P A R A L L A X * N O N * P C ----------------------------------------------------->
+
+    <!----------------------------------------------------- S C R O L L * F A D E ----------------------------------------------------->
+    <script type="text/javascript">
+      $(function(){  // $(document).ready shorthand
+      $('.monster').fadeIn('slow');});
+
+      $(document).ready(function() {
+    
+        /* Every time the window is scrolled ... */
+        $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+          $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }      
+          });   
+        });
+      });
+
+
+
+
+    </script>
+    <!----------------------------------------------------- S C R O L L * F A D E ----------------------------------------------------->
+
+  </head>
+
+<body class="burnt">
+  <div class="parallax-container" id="recent" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="images/rotate/185.jpg" data-natural-width="4608" data-natural-height="3032" style="min-height: 300vh;"> 
+      
+        <!----------------------------------------------------- M E N U * B A R ----------------------------------------------------->
+        <div class="fadeMenu hideme" style="background-color: #695e4d; position: fixed; z-index: 950;">
+          <h2 class="massive Josefin" style="color: #c99a51;font-weight: 200; padding-left: 10vw;">
+        
+          <a href="index.html#home" class="menuItem">Home</a>
+          <a href="projects.html#one" class="menuItem">One</a>
+          <a href="projects.html#two" class="menuItem">Two</a>
+          <a href="projects.html#list" class="menuItem">List</a>
+          <a href="writing.html" class="menuItem">Writing</a>
+          <a href="projects.html" class="menuItem">Projects</a>  
+         </h2>
+        </div>
+        <!----------------------------------------------------- M E N U * B A R ----------------------------------------------------->
+
+          <div id="one" class="spacer" style="height: 0vw; padding: 0.5vw;"></div>
+
+          <center> <section class="container" style="width: 70vw; padding-top: 5vh; padding-bottom: 5vh; margin-top: 25vh;margin-bottom: 5vh;">
+            <div class="surroundContainer">
+              <h2 id="two" class="Josefin reallyBig" style="font-weight: 600; padding-left: 2vw; padding-top: 5vh;">HEADER ONE</h2>
+                <h3 class="Josefin textBlock" style="font-weight: 200; font-style: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+
+              <h2 class="Josefin reallyBig" id="all" style="font-weight: 600; padding-left: 2vw; padding-top: 10vh;">HEADER TWO</h2>
+                <h3 id="list" class="Josefin textBlock" style="font-weight: 200; font-style: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            </div>
+          </section></center>
+
+          <center><section class="altBlock" style="width: 70vw; padding-top: 5vh;margin-top: 10vh;margin-bottom: 10vh;">
+            <div class="surround">
+              <h2 class="JosefinAlternate reallyBig" id="featured" style="font-weight: 600; padding-left: 2vw; padding-top: 10vh padding-bottom: 80vh;">One</h2>
+                <h3 class="JosefinAlternate textBlock" style="font-weight: 400; font-style: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            </div>
+          </section></center>
+
+          <center> <section class="container" style="width: 70vw; padding-top: 5vh;margin-top: 10vh;margin-bottom: 5vh; padding-bottom: 5vh; margin-top: 15vh;">
+            <div class="surroundContainer">
+              <h2 class="Josefin reallyBig" id="all" style="font-weight: 600; padding-left: 2vw;">Two</h2>
+                <h3 class="Josefin textBlock" style="font-weight: 200; font-style: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            </div>
+          </section></center>
+
+
+      <center><section class="altBlock" style="width: 70vw; padding-top: 5vh;margin-top: 15vh;margin-bottom: 5vh;">
+            <div class="surround">
+              <h2 class="JosefinAlternate reallyBig" id="featured" style="font-weight: 600; padding-left: 2vw; padding-top: 10vh padding-bottom: 80vh;">Three</h2>
+                <h3 class="JosefinAlternate textBlock" style="font-weight: 400; font-style: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            </div>
+          </section></center>
+
+
+  </div>
+
+  <div style="margin-top: 0vh;">
+    <footer>
+      <div class="container">
+        Nicolas Bray &copy; 2020 
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
