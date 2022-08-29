@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Nicolas Bray">
+    <meta name="description" content="This is my first webpage!">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Exercise - Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+       @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+      input {
+        width: 80%;
+        margin-left: 10%;
+      }
+
+      label {
+        width: 80%;
+        margin-left: 10%;
+      }
+
+      output {
+        width: 80%;
+        margin-left: 10%;
+      }
+
+      ul {
+        padding-left: 2rem;
+        list-style-type: none;
+      }
+
+      ul li {
+        padding-left: 2rem;
+        background-image: url('../images/rocket.jpg');
+        background-position: 0 0;
+        background-size: 1.6rem 1.6rem;
+        background-repeat: no-repeat;
+      }
+
+      a {
+        text-decoration: none;
+        color:  black;
+      }
+
+      .hover--link:hover {
+        color:  red;
+      }
+
+      .active--link:active {
+        font-size: 50px;
+      }
+
+      .memory--links:visited {
+        color: #981e32;
+      }
+
+      .bordered--link {
+        border: 1px solid black;
+      }
+
+      .round--link {
+        background-color: grey;
+        width: 200px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      p {
+        font-size: 20px;
+        color: grey;
+        font-family: 'Aboreto', cursive;
+      }
+
+
+      .box {
+        background-color: #adbeed;
+        text-align: center;
+      }
+
+      .holderbox {
+
+      }
+
+      .leftbox {
+        width: 50%;
+        float: left;
+        height: 400px;
+      }
+
+      .rightbox {
+        width: 50%;
+        float: right;
+        height: 400px;
+      }
+
+      .headerbox {
+
+      }
+
+
+    </style>
+
+
+    
+    
+  </head>
+  <body>
+
+  <header style="font-size:24px">Lists, Links, and Fonts</header>
+ 
+  <main>
+
+
+    <ul>
+
+      <li>Element One</li>
+      <li>Element Two</li>
+      <li>Element Three</li>
+
+    </ul>
+
+    <br />  
+
+    <ol start="6">
+
+      <li>Element Six</li>
+      <li>Element Seven</li>
+      <li>Element Eight</li>
+
+    </ol>
+
+    
+
+    <div class="box holderbox">
+
+      <h2 class="headerbox box">Links!</h2>
+      <p>All links have had text-decoration set to none</p><br />
+      
+      <div class="box leftbox">
+        <a class="hover--link" href="https://www.cnn.com/" target="_blank">Link to CNN</a>
+        <p>This link displays the :hover attribute</p><br />
+        <a class="active--link memory--links" href="">Make these words big</a>
+        <p>This link displays the :active and .visited attributes</p><br />
+        <a class="hover--link" href="https://www.youtube.com/" target="_blank">Link to YouTube</a>
+        <p>This link displays the :hover attribute</p><br />
+      </div>
+
+      <div class="box rightbox">
+        <a class="bordered--link" href="https://www.pcpartpicker.com/" target="_blank">Link to PCPartpicker</a>
+        <p>This link displays the .border attribute</p><br />
+        <a class="memory--links" href="https://www.reddit.com/" target="_blank">Link to Reddit</a>
+        <p>This link displays the .visited attribute</p><br />
+        <br />
+        <a class="round--link" href="https://www.wikipedia.org/" target="_blank">Link to Wikipedia</a>
+        <p>This link displays the .border-radius attribute</p><br />
+      </div>
+
+    </div>
+    
+    
+
+   
+
+  </main>
+
+
+
+  
+
+  
+
+  </body>
+</html>

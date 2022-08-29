@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Nicolas Bray">
+    <meta name="description" content="This is my first webpage!">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Exercise - Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+      input {
+        width: 80%;
+        margin-left: 10%;
+      }
+
+      label {
+        width: 80%;
+        margin-left: 10%;
+      }
+
+      output {
+        width: 80%;
+        margin-left: 10%;
+      }
+
+    </style>
+    
+    
+  </head>
+  <body>
+
+  <header style="font-size:24px">FORM PRACTICE</header>
+ 
+  <main>
+
+
+    <form action="https://nmidev.xyz/db5/receiver.php">
+
+      <label for="yourname">Your Name</label><br>
+      <input type="text" name="yourname"><br><br>
+
+      <label for="yourage">Your Age</label><br>
+      <input type="text" name="yourage"><br><br>
+
+      <label for="hometown">Hometown</label><br>
+      <input type="text" name="hometown"><br><br>
+
+      <input type="submit">
+      
+
+    </form>
+
+    <div id="colorbox" style="width: 200px;height:200px;margin:0 auto"></div>
+
+  </main>
+
+	<script src="index.js"></script>
+
+
+    <h1 id="top" style="width:  20%; margin-left: 40%; text-align: center">Nicolas Bray</h1>
+
+  
+<script>
+
+      const green = document.querySelector('#green');
+      const greenoutput = document.querySelector('.green-output');
+      var greenval = 0;
+
+      greenoutput.textContent = green.value;
+
+      green.addEventListener('input', () => {
+        greenoutput.textContent = green.value;
+        greenval = green.value;
+      });
+
+
+      const red = document.querySelector('#red');
+      const redoutput = document.querySelector('.red-output');
+      var redval = 0;
+
+      redoutput.textContent = red.value;
+
+      red.addEventListener('input', () => {
+        redoutput.textContent = red.value;
+        redval = red.value;
+      });
+
+
+      const blue = document.querySelector('#blue');
+      const blueoutput = document.querySelector('.blue-output');
+      var blueval = 0;
+
+      blueoutput.textContent = blue.value;
+
+      blue.addEventListener('input', () => {
+        blueoutput.textContent = blue.value;
+        blueval = blue.value;
+      });
+
+
+      
+
+      document.onclick = function() {
+        var colorbox = document.querySelector('#colorbox');
+        colorbox.style.backgroundColor = "rgb(" + redval + ", " + greenval + ", " + blueval + ")";
+      }
+
+    </script>
+  </body>
+</html>
