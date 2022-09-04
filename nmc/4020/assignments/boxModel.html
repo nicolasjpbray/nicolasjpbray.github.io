@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo Elements</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+      body {
+        height: 100vh;
+          background:
+      linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+      }
+
+      h1 {
+        font-size: 50px;
+        width: 100%;
+        text-align: center;
+      }
+
+      header {
+        width: 100%;
+        text-align: center;
+      }
+
+      header::first-letter {
+        font-size: 44px;
+      }
+
+      header::first-line {
+        color: #fc0303;
+      }
+
+      header::first-line {
+        color: rgb(252, 3, 3);
+      }
+
+      h2 {
+        transform: rotate(10deg);
+        width: 100%;
+        text-align: center;
+      }
+
+      p {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .button--holder {
+        width:  500px;
+        height: 150px;
+        margin: 0 auto;
+      }
+
+      .button--text {
+        font-family: 'Righteous', cursive;
+        text-align: center;
+        padding-top: 25px;
+        font-size: 25px;
+      }
+
+      .button--text--alternate {
+        padding-top: 45px;
+        color: white;
+      }
+
+      .shadow--text {
+        text-shadow: 4px 4px grey;
+      }
+
+      .button--background {
+        background-color: #aec27b;
+        height: 130px;
+        border-radius: 30px;
+      }
+
+      .button--background--alternate {
+        height: 130px;
+        background: linear-gradient(#536e5a, #c4474b);
+        border-radius: 30px;
+      }
+
+      .borders {
+        border-radius: 30px;
+        border-top: solid 10px #0c20c5;
+        border-left: solid 10px #0c20c5;
+        border-right: solid 10px #080e74;
+        border-bottom: solid 10px #080e74;       
+      }
+
+      .borders--outer {
+        border-top: solid 12px #080e74;
+        border-left: solid 12px #080e74;
+        border-right: solid 12px #0c20c5;
+        border-bottom: solid 12px #0c20c5;
+        border-radius: 45px;
+      }
+
+      .borders--alternate {
+        box-shadow: 0 0 0 30px white;
+        outline: dashed 30px #0c20c5;
+        border-radius: 30px;
+      }
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <h1>Pseudo Elements</h1>
+
+    <header> It was the best of times, <br> it was the worst of times. </header> 
+
+    <br><br><br><br>
+
+    <h2>Rotation example</h2>
+
+    <br><br>
+
+    <p>I couldn't find an exact match for the font on these examples so I just pulled one I liked from Google Fonts</p>
+
+    <br><br><br>
+
+    <div class="button--holder borders--outer">
+      <div class="borders button--background">
+        <h3 class="button--text">Example one of border, padding, etc.</h3>
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="button--holder">
+      <div class="borders--alternate button--background--alternate">
+        <h3 class="button--text button--text--alternate shadow--text">Example two of border, padding, etc.</h3>
+      </div>
+    </div>
+
+    <br><br><br>
+
+  </body>
+</html>
