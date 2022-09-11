@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Box Class</title>
+    <link rel="stylesheet" href="basic--box--class--style.css">
+  </head>
+  <body>
+	
+    <div id="central">
+
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <a href="https://www.google.com/">This Links to Google</a>
+
+    <br><br><br><br><br><br>
+
+    <button onclick="myFunction()">Change the circle</button>
+    <button onclick="myOtherFunction()">Change It Back!!!</button>
+
+    <script>
+      
+      function myFunction() {
+        document.getElementById("central").style.background = "radial-gradient(circle, rgba(23,234,51,1) 0%, rgba(152,70,127,1) 100%)";
+        document.getElementById("central").style.width = "20rem";
+        document.getElementById("central").style.height = "20rem";
+      }
+
+      function myOtherFunction() {
+        document.getElementById("central").style.background = "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)";
+        document.getElementById("central").style.width = "15rem";
+        document.getElementById("central").style.height = "15rem";
+      }
+
+    </script>
+
+  </body>
+</html>
