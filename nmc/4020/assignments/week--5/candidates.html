@@ -11,7 +11,8 @@
         list-style-type: decimal;
         width: 90vw;
         margin-left: 5vw;
-        text-align: center;    
+        text-align: center;  
+        margin-left: 5vw;
       }
 
       li {
@@ -19,7 +20,11 @@
         width: 10vw;
         padding: 1vw;
         font-size: 20px;
+        background-color: #C4B6DF;
+      }
 
+      li:hover {
+        background-color: #D5C9EE;
       }
 
       h2 {
@@ -32,10 +37,34 @@
         border-radius: 50%;
       }
 
+      body {
+        background-color: #E0E0E0;
+      }
+
+      .holder {
+        overflow: hidden;
+      }
+
+      @font-face {
+        font-family: comicSans;
+        src: url(fonts/COMIC.ttf);
+      }
+        
+      p {
+          font-family: comicSans;
+          font-size: 50px;
+          text-align: center;
+          background-color: black;
+          color: white;
+      }
+
     </style>
   </head>
   <body>
-    <ol id="alsoRan"></ol>
+    <br><br><br>
+    <div class="holder"><ol id="alsoRan"></ol></div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <p>I dislike formatting this list.  The numbers are in the wrong place.</span></p>
   </body>
 </html>
 <script src="js/candidates.js"></script>

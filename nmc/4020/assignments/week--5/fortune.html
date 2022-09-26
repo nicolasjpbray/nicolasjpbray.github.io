@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-
       #namehere {
         margin: 1vw;
         height: 3vh;
@@ -52,6 +51,19 @@
         border-radius: 15px;
       }
 
+      a {
+        text-decoration: none;
+        text-align: center;
+        color: black;
+      }
+
+      a:hover: {
+        cursor: pointer;
+      }
+
+      body {
+        background-color: #E0E0E0;
+      }
     </style>
 
   </head>
@@ -60,28 +72,50 @@
     <div class="holder">
      <input type="text" id="namehere" placeholder="Your name here"><br>
      <div id="result"></div>
-
+     <a href="https://github.com/nicolasjpbray/nicolasjpbray.github.io/blob/e8d78dc60fb43c573dfab317d4ab32bed8b67752/nmc/4020/assignments/week--5/fortune.html" target="_blank">Click here to check out the code!</a>
      <button id="fortune">Generate Fortune</button>
     </div>
   </body>
 </html>
+
 <script>
-  let outcomes = ["negotiate a tentative peace with the Dolphins." , "have a nice dinner tonight at the end of the Universe." , "steal the Heart of Gold.", "get a Groupon for classes on missing the ground." , "find the Question for the Answer."];
+  let outcomes = ["negotiate a tentative peace with the Dolphins." ,                    //creating and populating an array with all 
+  "have a nice dinner tonight at the End of the Universe." ,                            //    the possible outcomes for the fortune
+  "steal the Heart of Gold.", "get a Groupon for classes on missing the ground." , 
+  "find the Question for the Answer."];
 
-  let fortuneButton = document.querySelector('#fortune');
+  let fortuneButton = document.querySelector('#fortune');                               //creating the 'fortuneButton' variable for the
+                                                                                        //    'Generate Fortune' button
 
-  fortuneButton.onclick = function () {
-    fortune();
-  }
+  fortuneButton.onclick = function () {                                                 //the function, 'fortune,' will execute when 
+    fortune();                                                                          //    the 'Generate Fortune' button is pressed
+  } 
 
+  var randHolder = 0;                                                                   //making a variable, 'randHolder,' to hold the value
+                                                                                        //    of the selected fortune
   function fortune () {
-    let name = document.querySelector('#namehere').value;
-    let item = Math.floor((Math.random() * outcomes.length));
-    let result = document.querySelector('#result');
-    result.innerHTML = name + ", your fortune is that you will " + outcomes[item];
-  }
+    let name = document.querySelector('#namehere').value;                               //setting 'name' to the value of what is entered
+                                                                                        //    in the textbox
 
+    let item = Math.floor((Math.random() * outcomes.length));                           //setting 'item' to a randomly generated number between
+                                                                                        //    0 and 4 to correspond with the 'outcomes' array
 
+    if(randHolder==item && item!=4) {item++}                                            //if the randomly selected number from the prior iteration 
+                                                                                        //    is equal to the current one, we should increment the
+                                                                                        //    current number by one unless it's equal to the size
+                                                                                        //    of our array (4)
 
+    if(randHolder==item && item==4) {item--}                                            //if the number from this iteration and last iteration are 
+                                                                                        //    both 4, change the current number to 3 so that it is 
+                                                                                        //    different and does not exceed the size of our array (0-4)
 
+    randHolder = item;                                                                  //set randHolder to the new randomly generated number 
+                                                                                        //    for use in the next iteration
+
+    let result = document.querySelector('#result');                                     //setting the 'result' equal to the HTML section made 
+                                                                                        //    for displaying fortunes
+
+    result.innerHTML = name + ", your fortune is that you will " + outcomes[item];      //setting the 'result' section equal to a combination
+                                                                                        //    of a random array element, the entered text, 
+  }                                                                                     //    and a few stock words
 </script>
