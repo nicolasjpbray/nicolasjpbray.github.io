@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+ <link rel="stylesheet" href="ship.css">
+</head>
+
+<body>
+   
+    <div id="ship">
+        <div id="shipLight"></div>
+    </div>
+
+    <button onclick="rotate(1)">rotate + </button>
+    <button onclick="rotate(2)">rotate - </button>
+
+</body>
+</html>
+<script>
+    let ship = document.querySelector('#ship');
+    let shipLight = document.querySelector('#shipLight')
+    let howfar = 0;
+    let light = 0;
+    let direction = 0;
+    let rotation = 0;
+
+    
+
+    setInterval(function() {
+     
+     if(direction==1){
+        howfar-=5;
+        
+    }
+     if(direction==0){
+        howfar+=5;
+        
+    }
+
+     ship.style.left = howfar+"px";
+     if(howfar==-295) {
+        direction = 0;
+        ship.style.transform = "rotate("+rotation+"deg) scaleX(1)";
+    }
+     if(howfar>1000){
+        direction = 1;
+        ship.style.transform = "rotate("+(-rotation)+"deg) scaleX(-1)";
+    }
+     light++;
+     switch(light) {
+        case 25: shipLight.style.backgroundColor = "black";
+            break;
+        case 50: shipLight.style.backgroundColor = "red";
+            light = 0;
+            break;
+        default:
+            break;
+     }
+}, 10);
+   
+    function rotate(hold) {
+        if(hold == 1) {
+            rotation++;
+        }
+        if(hold == 2){
+            rotation--;
+        }
+
+        if(direction==0) {
+            ship.style.transform = "rotate("+rotation+"deg) scaleX(1)";
+        }
+
+        if(direction==1) {
+            ship.style.transform = "rotate("+(-rotation)+"deg) scaleX(-1)";
+        }
+        
+
+    }
+
+</script>
