@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Corona</title>
+
+    <style>
+
+        html {
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;  /* Firefox */
+        }
+        html::-webkit-scrollbar { 
+            display: none;  /* Safari and Chrome */
+        }
+
+        body {
+            margin:  0;
+        }
+
+        #list--holder {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #content--holder {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #story--list {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #image--list {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+       
+
+        h2 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .story--card {
+            height: 350px;
+        }
+
+        .image--card {
+            height: 350px;
+        }
+
+         .story--card--alternate {
+            height: 350px;
+            background-color: grey;
+        }
+
+        .image--card--alternate {
+            height: 350px;
+            background-color: grey;
+        }
+
+        .line--holder {
+            margin: 25px;
+            min-height: 350px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 40px;
+            color: black;
+        }
+
+        a:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        img {
+            height: 80%;
+            max-height: 300px;
+        }
+
+        button {
+            width: 10%;
+            margin-left: 45%;
+            padding: 20px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+
+        <div id="list--holder">
+
+            <div><h2>Project 3</h2></div>
+            <button onclick="loadStories()">Load Stories</button>
+            <div id="content--holder">
+            
+                <div id="story--list"></div>
+                <div id="image--list"></div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    
+</body>
+</html>
+<script src="corona.js"></script>
