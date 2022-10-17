@@ -27,8 +27,8 @@ function shuffle() {
 	let output = "<h2>HAND</h2>";
 
 	for(var j = 0; j < 5; j++) {
-		hand[j] = shuffleDeck[j];
-		shuffleDeck.splice(shuffleDeck[j], 1);
+		hand[j] = shuffleDeck[0];
+		shuffleDeck.splice(0, 1);
 		output += "<img class=\"discardable\" src=cards/" + hand[j] + ">";
 	}
 
