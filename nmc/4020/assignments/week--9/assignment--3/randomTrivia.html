@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOM TRIVIA II</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <style>
+
+        button {
+            font-size: 15px;
+            padding: .5vw;
+            border-radius: 120px;
+            width: 10vw;
+            height: 4vw;
+            margin-left: 45vw;
+            margin-top: .5vw;
+            margin-bottom: 5vw;
+            background-color: blue;
+            color: white;
+        }
+
+        button:hover {
+            cursor: pointer;
+            box-shadow: 0 0 10px black;
+        }
+       
+       #question {
+        font-size: 20px;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        text-align: center;
+       }
+
+       #category {
+        font-size: 30px;
+        color: maroon;
+        font-weight: 600;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        text-align: center;
+       }
+
+       .answer {
+        font-size: 20px;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        text-align: center;
+        color: purple;
+        height: 30px;
+       }
+
+    </style>
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+    
+    <button onclick="getQuestion()">New Question Set</button>
+
+    <div id="maindiv"></div>
+   
+  
+   
+</body>
+</html>
+
+<script>
+   var divLoad = document.querySelector('#maindiv');
+   var theAnswer = [];
+   function getQuestion() {
+        $.getJSON('https://jservice.io/api/random?count=10', function(data) {  
+            for(var i = 0; i < 9; i++) {
+                divLoad.innerHTML += "<h3 id=\"category\">Category: " + data[i].category.title + "</h3>";
+                divLoad.innerHTML += "<h3 id=\"question\">Question: " + data[i].question + "</h3>";
+                divLoad.innerHTML += "<h3 class=\"answer\" id=\"answer" + i + "\"></h3>";
+                theAnswer.push(data[i].answer);
+                divLoad.innerHTML += "<button onclick=\"showAnswer(" + i +")\">Show Answer</button>";
+            }
+        });
+   }
+   
+   function showAnswer(number) {
+        let holder = document.querySelector("#answer" + number);
+        holder.innerHTML += "Answer: " + theAnswer[number];
+   }
+</script>
+
