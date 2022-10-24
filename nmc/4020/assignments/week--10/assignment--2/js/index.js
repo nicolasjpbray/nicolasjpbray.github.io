@@ -93,7 +93,7 @@ var songs = [
             "bandName" : "The Beatles", 
             "songImage" : "beatles_abbey.jpg", 
             "albumTitle" : "Abbey Road",
-            "songName" : "She Came In Through The Bathroom"
+            "songName" : "She Came In Through The Bathroom Window"
         }, 
         {
             "bandName" : "Deep Purple", 
