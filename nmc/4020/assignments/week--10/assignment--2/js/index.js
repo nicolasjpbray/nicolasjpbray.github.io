@@ -151,23 +151,21 @@ var songs = [
         }
     ];
 
-    var playingSong = songs[0];
-    var counter = 0;
+    let playingSong = songs[0];
+    let counter = 0;
     let juke = document.querySelector('#juke');
     let playButton = document.querySelector('#toggleButton');
     let albumCover = document.querySelector('#song--image');
     let songName = document.querySelector('h2');
     let bandName = document.querySelector('h3');
+    let albumName = document.querySelector('h4');
     let theToggle = 0;
 
     function togglePlay () {
         let audioPlayer = document.querySelector('#player');
         if(theToggle==0) {
             theToggle++;
-            songName.innerHTML = "\"" + playingSong.songName + "\"";
-            bandName.innerHTML = playingSong.bandName;
-            albumCover.innerHTML = "<img src=\"images/" + playingSong.songImage + "\">";
-            juke.innerHTML = "<audio controls autoplay src=\"music/" + playingSong.songName + ".m4a\" id=\"player\" type='audio/m4a'></audio>";
+            updateDisplay();
             playButton.innerHTML = "||";
         } else {
             if(theToggle%2==0) {
@@ -185,21 +183,25 @@ var songs = [
     function nextSong() {
         if(theToggle%2==0) { theToggle++; }
         if(counter<24) { counter++; } else { counter = 0; }
-        playingSong = songs[counter];
-        songName.innerHTML = "\"" + playingSong.songName + "\"";
-        bandName.innerHTML = playingSong.bandName;
-        albumCover.innerHTML = "<img src=\"images/" + playingSong.songImage + "\">";
-        juke.innerHTML = "<audio controls autoplay src=\"music/" + playingSong.songName + ".m4a\" id=\"player\" type='audio/m4a'></audio>";
-        playButton.innerHTML = "||";
+        changeSong();
     }
 
     function prevSong() {
         if(theToggle%2==0) { theToggle++; }
         if(counter > 0) { counter--; } else { counter = 24; }
-        playingSong = songs[counter];
+        changeSong();
+    }
+
+    function updateDisplay() {
         songName.innerHTML = "\"" + playingSong.songName + "\"";
         bandName.innerHTML = playingSong.bandName;
+        albumName.innerHTML = playingSong.albumTitle;
         albumCover.innerHTML = "<img src=\"images/" + playingSong.songImage + "\">";
         juke.innerHTML = "<audio controls autoplay src=\"music/" + playingSong.songName + ".m4a\" id=\"player\" type='audio/m4a'></audio>";
+    }
+
+    function changeSong() {
+        playingSong = songs[counter];
+        updateDisplay();
         playButton.innerHTML = "||";
     }
