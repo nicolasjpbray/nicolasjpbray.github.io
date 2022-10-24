@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUKEBOX</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body>  
+   <div id="song--holder">
+       <div id="display--holder">
+            <div id="song--image"></div>
+            <div id="song--list">
+                <h2></h2>
+                <h3></h3>
+            </div>
+       </div>
+       <div id="controls--holder">
+        <div id="button--holder">
+            <button onclick="prevSong()"><<<</button>
+            <button id="toggleButton" onclick="togglePlay()">|></button>
+            <button onclick="nextSong()">>>></button>
+        </div>
+        <div id="juke"><audio controls src="" id="player" type='audio/m4a'></audio></div>
+       </div>
+   </div>
+</body>
+</html>
+<script src="js/index.js"></script>
+
