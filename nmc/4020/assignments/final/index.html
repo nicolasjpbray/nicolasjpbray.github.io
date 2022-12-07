@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Film Terminal</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <body>
+
+    <!---------------    ROW ONE BGN   --------------->
+    <div>
+
+      <div id="topbar">
+
+        <div id="topbar-text">FILM TERMINAL</div>
+
+      </div>
+
+      <div id="toprow">
+
+
+    <!---------------    COL ONE BGN   --------------->
+        <div id="column" class="top-left-home">
+
+          <div class="holder"></div>
+          
+        </div>
+    <!---------------    COL ONE END   --------------->
+        
+
+
+    <!---------------    COL TWO BGN   --------------->
+        <div id="column" class="top-middle-home">
+
+          <div class="holder"></div>
+          <div class="holder">
+            <button id="searchButton">SEARCH</button>
+            <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField"/>
+          </div>
+          <div class="holder"></div>
+
+        </div>
+    <!---------------    COL TWO END    --------------->
+
+
+
+    <!---------------    COL TRE BGN   --------------->
+        <div id="column" class="top-right-home">
+
+          <div class="holder"></div>
+
+        </div>
+    <!---------------    COL TRE END   --------------->
+
+
+
+
+      </div>
+
+    </div>
+    <!---------------    ROW ONE END   --------------->
+
+
+
+
+
+
+
+    <!---------------    ROW TWO BGN   --------------->
+    <div>
+
+      <div id="bottomrow">
+      
+
+
+
+    <!---------------    COL ONE BGN   --------------->
+        <div id="column" class="bottom-left-home">
+
+          <div class="holder">
+            <p id="tile-one"></p>
+          </div>
+          <div class="holder">
+            <p id="tile-two"></p>
+          </div>
+          <div class="holder">
+            <p id="tile-three"></p>
+          </div>
+          
+        </div>
+    <!---------------    COL ONE END   --------------->
+        
+
+
+    <!---------------    COL TWO BGN   --------------->
+        <div id="column" class="bottom-middle-home">
+
+          <div class="holder" id="tile-four"></div>
+          <div class="holder"></div>
+
+        </div>
+    <!---------------    COL TWO END    --------------->
+
+
+
+    <!---------------    COL TRE BGN   --------------->
+        <div id="column" class="bottom-right-home">
+
+          <div class="holder"></div>
+
+        </div>
+    <!---------------    COL TRE END   --------------->
+
+
+
+
+      </div>
+
+    </div>
+    <!---------------    ROW TWO END   --------------->
+
+
+
+  <script>
+
+      let button = document.getElementById("searchButton");
+
+      button.onclick = function() {
+        let displayTitle = document.getElementById("tile-one");
+        let displayDesc = document.getElementById("tile-two");
+        let displayScore = document.getElementById("tile-three");
+        let displayWatch = document.getElementById("tile-four");
+        let identity = 0;
+        let movieString = "";
+
+        let search = document.getElementById("searchTxt").value;
+
+        $(document).ready(function() { 
+            $.getJSON('https://api.themoviedb.org/3/search/movie?api_key=2030a06705f03dfab4619a3ce26aa59a&query=' + search, function(data) { 
+
+                let dataSource = data.results;
+                
+                  displayTitle.innerHTML = dataSource[0].original_title;  
+                  displayDesc.innerHTML = dataSource[0].overview; 
+                  displayScore.innerHTML = dataSource[0].vote_average; 
+                  identity = dataSource[0].id;
+                  movieString = "https://api.themoviedb.org/3/movie/" + identity + "/watch/providers?api_key=2030a06705f03dfab4619a3ce26aa59a"
+        } )}); 
+
+             
+            $(document).ready(function() { 
+              $.getJSON(movieString, function(data) { 
+                let dataSource = data.results;
+
+                  displayWatch.innerHTML = dataSource[0].flatrate[0].provider_name;  
+
+            }); 
+        });
+        
+          }
+
+</script>
+  </body>
+
+</html>

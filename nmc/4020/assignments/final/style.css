@@ -1,0 +1,108 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#toprow {
+	height: 93vh;
+	background-color: blue;
+	display: flex;
+	flex-direction: row;
+	min-width: 800px;
+}
+
+#topbar {
+	height: 7vh;
+	background-color: #221d2b;
+	display: flex;
+	color: #5500ed;
+	align-items:center;
+    justify-content:center;
+}
+
+#topbar-text {
+	margin-left: 50px;
+	font-size: clamp(1.5rem, 3vw, 3rem); 
+
+}
+
+#column {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.top-left-home {
+	background-color: yellow;
+}
+
+.top-middle-home {
+	background-color: green;
+}
+
+.top-right-home {
+	background-color: purple;
+}
+
+#bottomrow {
+	height: 100vh;
+	background-color: blue;
+	display: flex;
+	flex-direction: row;
+}
+
+.bottom-left-home {
+	background-color: green;
+}
+
+.bottom-middle-home {
+	background-color: purple;
+}
+
+.bottom-right-home {
+	background-color: yellow;
+}
+
+.holder {
+	background-color: grey;
+	height: 100%;
+	width: 90%;
+	margin: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+}
+
+#tile-one {
+	color: red;
+    font-size: clamp(1rem, 5vw, 4rem); 
+}
+
+#tile-two {
+	color: blue;
+	font-size: clamp(1rem, 3vw, 2rem); 
+}
+
+#tile-three {
+	color: green;
+	font-size: clamp(1rem, 3vw, 2rem); 
+}
+
+#tile-four {
+	color: purple;
+	font-size: clamp(1rem, 3vw, 2rem); 
+}
+
+.searchField {
+	margin: 30px;
+}
