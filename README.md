@@ -1,1 +1,0 @@
-# nicolasjpbray.github.io
