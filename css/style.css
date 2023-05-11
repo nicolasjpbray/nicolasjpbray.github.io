@@ -184,6 +184,10 @@ img {vertical-align: middle;}
   margin: auto;
 }
 
+.prev {
+	left: 00%;
+}
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -198,6 +202,7 @@ img {vertical-align: middle;}
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  font-size: 45px;
 }
 
 /* Position the "next button" to the right */
@@ -209,6 +214,7 @@ img {vertical-align: middle;}
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+  border-radius: 15px;
 }
 
 /* Caption text */
@@ -309,4 +315,17 @@ img {vertical-align: middle;}
 	flex: 1;
 	border: white 5px solid;
 
+}
+
+.slideshow-container {
+	display: flex;
+	max-height: 900px;
+	width: auto;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.slideshow-container img {
+	flex: 1;
+	max-height: 700px;
 }
